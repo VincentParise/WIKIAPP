@@ -1,4 +1,5 @@
 // API ENDPOINT : `https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&origin=*&srlimit=20&srsearch=${searchInput}`
+
 const results = document.querySelector(".results");
 
 const research = document.querySelector(".research");
@@ -13,9 +14,11 @@ research.addEventListener("input", (e) => {
 });
 
 function displaySearch(data) {
+    results.textContent='';
     // Itérer un objet en récupérant la clé et la valeur :
     Object.entries(data.query.search).forEach(([index, value]) =>{
-        console.log(`Clé : ${index}, Valeur : ${value}`);  
+        results.innerHTML += `<p>${value.title}</p></br>`
+        //console.log(`Clé : ${index}, Valeur : ${value.title}`);  
     });
 }
 

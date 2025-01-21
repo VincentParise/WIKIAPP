@@ -7,20 +7,24 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="image">
-        <img src="/WIKIAPP/ressources/wiki-logo.png" alt="" />
-      </div>
-      <h1>Recherche <span>Wikipedia</span></h1>
-      <div class="input-container">
-        <input
-          type="text"
-          placeholder="votre recherche"
-          id="research"
-          class="research"
-        />
-      </div>
-      <div class="results">Résultats recherche</div>
+    <img
+      src="/WIKIAPP/ressources/wiki-logo.png"
+      alt="wikipedia logo"
+      class="wiki-logo"
+    />
+    <h1>Recherche <span>Wikipedia</span></h1>
+
+    <form>
+      <input type="text" placeholder="votre recherche" class="search-input" />
+    </form>
+
+    <p class="error-msg"></p>
+
+    <div class="results-display"></div>
+    <div class="loader">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
     </div>
 
     <script src="app.js"></script>
